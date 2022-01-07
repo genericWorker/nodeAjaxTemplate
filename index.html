@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- head definitions go here -->
+    </head>
+    <body >
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <h1>Hello World!</h1>
+        <input id = "btnSubmit" type="submit"/>
+        <script>
+            $(document).ready(function() {
+                $("#btnSubmit").click(function(){
+                   $.get('/data', {},function(data){
+                    alert("Anything back"); 
+                    
+               });
+            });
+
+            function getMessageText() {
+                $.get('http://127.0.0.1:3000/data', {},function(data){
+                    alert(data)
+               });
+            }
+  /*  
+            function myFunction() {
+              // alert("Page is loaded");
+               alert(getMessageText());
+              }
+
+          $(#button).on('click' function() {
+            $.get('http://127.0.0.1:3000/data', {},function(data){
+                alert(data)
+           });
+          }
+       */ 
+        
+        
+        
+        </script>
+    </body>
+</html>
